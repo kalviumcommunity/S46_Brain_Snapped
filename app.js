@@ -3,9 +3,9 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.json({message:"Hello, I am Snegan from Kalvium.My squad's number is 46!."});
+  res.json({message:"Hello, Express!"});
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}.`);
+  console.log(`Server is running at http://localhost:${port}`);
 });
