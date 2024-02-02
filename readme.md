@@ -21,6 +21,6 @@ This compilation captures those spontaneous and seemingly purposeless actions th
 ### Social Snapshots
 - Making funny faces at yourself in the mirror.
 
-Feel free to contribute more peculiar behaviors to this collection!
+>Feel free to contribute more peculiar behaviors to this collection!
 
-#### Thank You :)
+#### Thank You :D
