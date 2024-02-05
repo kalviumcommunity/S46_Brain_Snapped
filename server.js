@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.json({message:"Hello, I am Snegan currently studying in Kalvium!."});
+  res.json({message:"Hello, I'm Snegan and currently studying in Kalvium!."});
 });
 
 app.listen(port, () => {
