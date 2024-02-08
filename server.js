@@ -15,7 +15,7 @@ const isConnect = () => {1;
 
 app.get('/', (req, res) => {
   res.json({ message: "Hello, I'm Snegan, currently studying in Kalvium!",
-  database:isConnect()? "DixConnected to the Server.":"Disconnected from the server."
+  database:isConnect()? "Connected to the Server.":"Disconnected from the server."
 });
 });
 
