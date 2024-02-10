@@ -1,12 +1,12 @@
 import React from 'react'
-import RandomThoughts from './RandomThingsGenerator';
+import RandomThings from './RandomThingsGenerator';
 
 export default function Body() {
   return (
     <>
     <div id='content'>
       <h1>
-        <RandomThoughts />
+        <RandomThings />
       </h1>
     </div>
     </>
