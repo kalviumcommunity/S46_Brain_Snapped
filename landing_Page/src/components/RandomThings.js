@@ -1,5 +1,5 @@
-// src/data/quotes.js
-const quotes = [
+
+const randomThings = [
     "Checking the fridge even though you just checked it five minutes ago.",
     "Clicking your pen repeatedly even though it doesn't make it write any faster.",
     "Starting a sentence, then forgetting what you were going to say.",
@@ -28,5 +28,5 @@ const quotes = [
     "Sending 'haha' with different lengths to make it seem more genuine.",
   ];
   
-  export default quotes;
+  export default randomThings;
   

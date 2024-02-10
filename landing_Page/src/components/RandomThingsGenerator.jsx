@@ -1,23 +1,23 @@
 // src/components/QuoteGenerator.js
 import React, { useState } from 'react';
-import quotes from './RandomThings';
+import randomThings from './RandomThings';
 
-const QuoteGenerator = () => {
-  const [randomQuote, setRandomQuote] = useState('');
+const randomThingsGenerator = () => {
+  const [randomThing, setRandomThing] = useState(randomThings[0]);
 
-  const generateRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    setRandomQuote(quotes[randomIndex]);
+  const generateRandomThings = () => {
+    const randomIndex = Math.floor(Math.random() * randomThings.length);
+    setRandomThing(randomThings[randomIndex]);
   };
 
   return (
-    <div id='quotes'>
-        <div className="quote-generator">
-            <p id='quoteline'>{randomQuote}</p>
-            <button onClick={generateRandomQuote}>Random Things</button>
+    <div id='randoms'>
+        <div>
+            <p id='randomline'>{randomThing}</p>
+            <button onClick={generateRandomThings}>Random Things</button>
         </div>
     </div>
   );
 };
 
-export default QuoteGenerator;
+export default randomThingsGenerator;
