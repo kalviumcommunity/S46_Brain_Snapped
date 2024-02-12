@@ -10,10 +10,7 @@ function App() {
     
     <div className="app">
       <div className="vertical-split">
-        <Navbar />
-        <video autoPlay loop muted playsInline className="background-video">
-          <source src="images/videos2.mp4" type="video/mp4" />
-        </video>
+        <Navbar/>
         <Body />
       </div>
     </div>

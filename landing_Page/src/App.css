@@ -7,6 +7,14 @@
   color: white;
 }
 
+body {
+  background-image: url("C:/Users/pssj2/Kalvium Progs/Full Stack progs/lab-brainSnapped/S46_Brain_Snapped/landing_Page/images/background4.jpg");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -26,17 +34,53 @@ nav {
   width: 10vw;
 }
 
+#randoms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Changed from 80dvh to 80vh */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  
+ 
+}
+
+/* src/components/RandomThingsGenerator.css */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 #randoms {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80dvh;
+  height: 80vh;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  /* animation: slideInFromRight 1.5s ease-in forwards; */
+
 }
 
 #randomline {
-  margin: 0 400px;
+  margin: 0 400px; 
   font-size: 2.2rem;
 }
 
@@ -47,11 +91,5 @@ button {
   border-radius: 25px ;
   color: black;
   border: 1px solid black;
-}
-
-.background-video{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  animation: slideInFromLeft 1.5s ease-out backwards;
 }

@@ -1,8 +1,7 @@
-// src/components/QuoteGenerator.js
 import React, { useState } from 'react';
 import randomThings from './RandomThings';
 
-const randomThingsGenerator = () => {
+const QuoteGenerator = () => {
   const [randomThing, setRandomThing] = useState(randomThings[0]);
 
   const generateRandomThings = () => {
@@ -12,12 +11,13 @@ const randomThingsGenerator = () => {
 
   return (
     <div id='randoms'>
-        <div>
-            <p id='randomline'>{randomThing}</p>
+        <div className="random-generator">
+            <p>{randomThing.userName},</p>
+            <p>{randomThing.snappedData}</p>
             <button onClick={generateRandomThings}>Random Things</button>
         </div>
     </div>
   );
 };
 
-export default randomThingsGenerator;
+export default QuoteGenerator;
