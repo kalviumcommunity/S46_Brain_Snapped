@@ -1,4 +1,3 @@
-#  List of things we do for no reason
 
 ## Description:
 
@@ -24,3 +23,5 @@ This compilation captures those spontaneous and seemingly purposeless actions th
 Feel free to contribute more peculiar behaviors to this collection!
 
 #### Thank You :D
+=======
+
