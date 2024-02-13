@@ -2,10 +2,10 @@ const mongoose = require ('mongoose')
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const port = 1000;
+const port = 3000;
 
 const dataBase = async () => {
-    mongoose.connect(process.env.URL)
+    mongoose.connect(process.env.LINK)
 }
 dataBase()
 
