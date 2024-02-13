@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const port = 1000;
 
-// Middleware to parse JSON bodies
 app.use(express.json());
 
 const dataBase = async () => {
