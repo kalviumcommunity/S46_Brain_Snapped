@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 const dataBase = async () => {
-    mongoose.connect(process.env.LINK)
+    mongoose.connect(process.env.URI)
 }
 dataBase()
 
