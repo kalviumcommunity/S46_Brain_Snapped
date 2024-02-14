@@ -1,14 +1,14 @@
 import React from 'react'
-import RandomThings from './RandomThingsGenerator';
 
-export default function Body() {
+
+function Body() {
   return (
-    <>
-    <div id='content'>
-      <h1>
-        <RandomThings />
-      </h1>
+    <div className='random-thing-generator'>
+      <p>Lucy,</p>
+      <p>Randomly hitting branches of trees when I see them.</p>
+      <button>Random Things</button>
     </div>
-    </>
   )
 }
+
+export default Body
