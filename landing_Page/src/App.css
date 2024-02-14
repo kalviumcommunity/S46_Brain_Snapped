@@ -1,117 +1,60 @@
-
 *{
-  padding:0;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  /* font-family: monospace; */
-  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  background-image: url("C:/Users/pssj2/Kalvium Progs/Full Stack progs/lab-brainSnapped/S46_Brain_Snapped/landing_Page/images/background4.jpg");
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat;
-  height: 100vh;
-    background-image: url("C:/Users/pssj2/Kalvium Progs/Full Stack progs/lab-brainSnapped/S46_Brain_Snapped/landing_Page/images/background1.jpeg");
-  background-size: cover;
-  /* background-position: center;  */
-  background-repeat: no-repeat;
-  height: 100vh;
-  overflow: hidden;
-  /* font-family: cursive; */
+ background-image: url("https://images.unsplash.com/photo-1518781780548-4d410d94ec75?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+ background-position: center;
+ background-size: cover; 
+ background-repeat: no-repeat;
+ height: 100dvh;
+ overflow: hidden;
 }
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 10px;
+  align-items: center;
   padding: 20px;
+  margin: 10px;
+  color:white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
-.logo{
-  font-size: 2.1rem;
-  /* font-family:mon; */
-}
+h1 {
+  font-size: 2rem;
+} 
 
-.headers{
+.headers {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 30%;
-  width: 10vw;
+  width: 15vh;
 }
 
-#randoms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Changed from 80dvh to 80vh */
+.random-thing-generator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.8rem;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  
- 
-}
-
-/* src/components/RandomThingsGenerator.css */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* @keyframes slideInFromRight {
->>>>>>> Setting_up_react_app
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-}
-
-} */
-
-
-#randoms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  /* animation: slideInFromRight 1.5s ease-in forwards; */
-
-}
-
-#randomline {
-  margin: 0 400px; 
-  font-size: 2.2rem;
-
-  margin: 0 400px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  /* animation: slideInFromRight 1.5s ease-in forwards; */
-
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); */
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  color: black;
 }
 
 button {
-  margin: 20px;
-  padding: 12px;
-  font-size: 0.9rem;
-  border-radius: 25px ;
-  color: black;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
   border: 1px solid black;
-
-  animation: slideInFromLeft 1.5s ease-out backwards;
-  animation: slideInFromLeft 1.0s ease-out backwards;
-  font-family: monospace;
 }
