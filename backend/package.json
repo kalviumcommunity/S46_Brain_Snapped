@@ -1,15 +1,41 @@
 {
+
   "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+
+  "name": "s46_brain_snapped",
+  "version": "1.0.0",
+
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+
     "axios": "^1.6.7"
   }
+
+    "express": "^4.18.2"
+  }
+
+  "description": "This compilation captures those spontaneous and seemingly purposeless actions that cross our minds in a split second. Here are a few instances:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+
+
 }
