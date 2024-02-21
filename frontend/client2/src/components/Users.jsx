@@ -30,7 +30,7 @@ function Users() {
                 <table className='table'>
                     <thead>
                         <tr>
-                            <th>User ID</th>
+                            {/* <th>User ID</th> */}
                             <th>Name</th>
                             <th>Random Things</th>
                             <th>Action</th>
@@ -39,8 +39,8 @@ function Users() {
                     <tbody>
                         {users.map((person) => {
                             return (
-                                <tr key={person.userID}>
-                                    <td>{person.userID}</td>
+                                <tr key={person._id}>
+                                    {/* <td>{person._id}</td> */}
                                     <td>{person.username}</td>
                                     <td>{person.snappedData}</td>
                                     <td>

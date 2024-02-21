@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function CreateUser() {
     const [username,setUserName] = useState();
-    const [userID, setUserID] = useState();
+    // const [userID, setUserID] = useState();
     const [snappedData,setSnappedData] = useState();
     const navigate = useNavigate()
 
@@ -13,7 +13,7 @@ function CreateUser() {
         e.preventDefault()
         axios.post("http://localhost:3001/createUser",{
             username,
-            userID,
+            // userID,
             snappedData
         })
         .then(result => {
@@ -35,9 +35,10 @@ function CreateUser() {
                     placeholder='Enter name' 
                     className='form-control' 
                     onChange={(event)=>setUserName(event.target.value)}
+                    required
                     />
                 </div>
-                <div>
+                {/* <div>
                     <label htmlFor="">UserId</label>
                     <input 
                     type="Number"
@@ -45,7 +46,7 @@ function CreateUser() {
                     className='form-control'
                     onChange={(event)=>setUserID(event.target.value)}
                      />
-                </div>
+                </div> */}
                 <div>
                     <label htmlFor="">Random Things</label>
                     <input 
@@ -53,6 +54,7 @@ function CreateUser() {
                     placeholder='Enter a random thing you do' 
                     className='form-control' 
                     onChange={(event)=>setSnappedData(event.target.value)}
+                    required
                     />
                 </div>
                 <button className='btn btn-success'>Submit</button>

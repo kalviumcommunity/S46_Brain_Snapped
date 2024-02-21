@@ -5,7 +5,7 @@ import axios from 'axios';
 function UpdateUser() {
     const {id} = useParams();
     const [updatedUsername, setUpdatedUsername] = useState('');
-    const [updatedUserID, setUpdatedUserID] = useState('');
+    // const [updatedUserID, setUpdatedUserID] = useState('');
     const [updatedSnappedData, setUpdatedSnappedData] = useState('');
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ function UpdateUser() {
         .then(result => {
             console.log(result.data);
             setUpdatedUsername(result.data.username);
-            setUpdatedUserID(result.data.userID);
+            // setUpdatedUserID(result.data.userID);
             setUpdatedSnappedData(result.data.snappedData);
         })
         .catch(err => console.log(err))
@@ -24,7 +24,7 @@ function UpdateUser() {
         e.preventDefault()
         axios.put(`http://localhost:3001/updateUser/${id}`, {
             updatedUsername,
-            updatedUserID,
+            // updatedUserID,
             updatedSnappedData
         })
         .then(result => {
@@ -48,9 +48,10 @@ function UpdateUser() {
                             placeholder='Enter name' 
                             className='form-control' 
                             onChange={(event)=>setUpdatedUsername(event.target.value)}
+                            required
                         />
                     </div>
-                    <div>
+                    {/* <div>
                         <label htmlFor="">UserId</label>
                         <input 
                             type="Number"
@@ -59,7 +60,7 @@ function UpdateUser() {
                             className='form-control'
                             onChange={(event)=>setUpdatedUserID(event.target.value)}
                         />
-                    </div>
+                    </div> */}
                     <div>
                         <label htmlFor="">Random Things</label>
                         <input 
@@ -68,6 +69,7 @@ function UpdateUser() {
                             placeholder='Enter a random thing you do' 
                             className='form-control' 
                             onChange={(event)=>setUpdatedSnappedData(event.target.value)}
+                            required
                         />
                     </div>
                     <button className='btn btn-success'>Update</button>
