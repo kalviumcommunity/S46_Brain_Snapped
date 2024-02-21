@@ -5,7 +5,11 @@ const app = express();
 const port = 2000;
 
 const dataBase = async () => {
+
+    mongoose.connect(process.env.URI)
+
     mongoose.connect(process.env.URL)
+
 }
 dataBase()
 
