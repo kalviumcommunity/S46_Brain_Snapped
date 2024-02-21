@@ -5,7 +5,11 @@ const app = express();
 const port = 2000;
 
 const dataBase = async () => {
+
     mongoose.connect(process.env.URI)
+
+    mongoose.connect(process.env.URL)
+
 }
 dataBase()
 
@@ -22,3 +26,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}.`);
 });
+
