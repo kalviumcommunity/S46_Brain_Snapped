@@ -1,3 +1,4 @@
+#  List of things we do for no reason
 
 ## Description:
 
@@ -12,16 +13,14 @@ This compilation captures those spontaneous and seemingly purposeless actions th
 ## Categories:
 
 ### Daily Quirks
-- Tapping your fingers on a table in a rhythmic beat.
+- Tapping your fingers on a table in a rhythmic beat..
 
 ### Mental Meanderings
 - Attempting to recall a song stuck in your head but struggling to remember the lyrics.
 
 ### Social Snapshots
-- Making funny faces at yourself in the mirror.
+- Making funny faces at yourself in the mirror..
 
 Feel free to contribute more peculiar behaviors to this collection!
 
 #### Thank You :D
-=======
-
