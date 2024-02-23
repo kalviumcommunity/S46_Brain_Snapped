@@ -23,31 +23,33 @@ function CreateUser() {
     }
     
     return (
-        <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
-            <div className='w-50 bg-white rounded p-3'>
+        <div className='d-flex vh-100 bg-white   justify-content-center align-items-center'>
+            <div className='bg-black rounded p-3 text-white ' style={{ width: '500px' ,border:'1px solid white'}}>
                 <form onSubmit={Submit}>
-                    <h2>Create New User</h2>
-                    <div>
-                        <label htmlFor="">Name</label>
+                    <h2 className='text-center mb-2'>Create New User</h2>
+                    <div className='m-1'>
+                        <label htmlFor="" className='p-2 text-white'>Name</label>
                         <input 
                             type="text" 
                             placeholder='Enter name' 
-                            className='form-control' 
+                            className='form-control bg-dark text-white' 
                             onChange={(event) => setUserName(event.target.value)}
                             required
                         />
                     </div>
-                    <div>
-                        <label htmlFor="">Random Things</label>
+                    <div className='m-2'>
+                        <label htmlFor="" className='p-2 text-white'>Random Things</label>
                         <input 
                             type="text" 
                             placeholder='Enter a random thing you do' 
-                            className='form-control' 
+                            className='form-control bg-dark text-white' 
                             onChange={(event) => setSnappedData(event.target.value)}
                             required
                         />
                     </div>
-                    <button className='btn btn-success'>Submit</button>
+                    <div className='text-end'>
+                        <button className='btn btn-success m-3'>Add</button>
+                    </div>
                 </form>
             </div>
         </div>
