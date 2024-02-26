@@ -27,14 +27,25 @@ function Users() {
                 <hr />
                 <Link to='/create' className='btn btn-success'> Add User </Link>
                 <div className="row mt-4">
+
+                    {users.map((person) => {
+                        return (
+                            <div className="col-md-4 mb-3" key={person._id}>
+
                     {users.map((person, index) => {
                         return (
                             <div className="col-md-4 mb-5" key={person._id}>
+
                                 <div className="card h-100" style={{backgroundColor: 'black', color: 'white'}}>
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title large-text">{person.username}</h5>
                                         <hr />
                                         <p className="card-text flex-grow-1">{person.snappedData}</p>
+
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            <Link to={`/update/${person._id}`} className='btn btn-primary'>✏️Edit</Link>
+                                            <button className='btn btn-danger'onClick={(e) => handleDelete(person._id)}> ☠️Delete</button>
+
                                         <div className="d-flex justify-content-between">
                                             <Link to={`/update/${person._id}`} className='btn btn-primary' >✏️Edit</Link>
                                             <button 
@@ -44,6 +55,7 @@ function Users() {
                                                 >
                                                     ☠️Delete
                                             </button>
+
                                         </div>
                                     </div>
                                 </div>
