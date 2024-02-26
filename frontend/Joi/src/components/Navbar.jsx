@@ -1,11 +1,8 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import RandomThingsGenerator from './RandomThingsGenerator';
 import '../App.css';
 
-import RandomThingsGenerator from './RandomThingsGenerator';
-import '../App.css'
 
 
 function Navbar() {
