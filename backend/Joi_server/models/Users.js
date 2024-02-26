@@ -5,5 +5,7 @@ const UserSchema = new mongoose.Schema({
     snappedData: String
 });
 
+
 const UserModal = mongoose.model("userdatas", UserSchema);
 module.exports = UserModal;
+
