@@ -19,9 +19,8 @@ function Navbar() {
         </nav>
         <div className='random-thing-generator'>
             <RandomThingsGenerator/>
-        </div>
+      </div>
     </div>
-
   );
 }
 
