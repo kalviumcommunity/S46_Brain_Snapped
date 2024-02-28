@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const jwt = require('jsonwebtoken');
 const { loginSchema, userSchema } = require('./models/validateSchema.js');
 const UserModal = require('./models/Users.js');
 const LoginModal = require('./models/Login.js');
@@ -12,26 +11,6 @@ app.use(express.json());
 
 mongoose.connect("mongodb+srv://Snegan29:snegan2914@cluster0.jqmpnkb.mongodb.net/Brain-Snapped?retryWrites=true&w=majority");
 
-// Generating tokens
-const generateToken = (payload) => {
-    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '1d' });
-}
-
-// Authentication middleware
-const authenticate = (req, res, next) => {
-    const token = req.headers.authorization;
-    if (!token || !token.startsWith('Bearer ')) {
-        return res.status(401).send('Unauthorized: No token provided');
-    }
-    const authToken = token.split('Bearer ')[1];
-    try {
-        const decoded = jwt.verify(authToken, "secretcanbeasecret");
-        req.user = decoded;
-        next();
-    } catch (error) {
-        return res.status(403).send('Forbidden: Invalid token');
-    }
-}
 
 // Routes
 app.get('/logins', (req, res) => {

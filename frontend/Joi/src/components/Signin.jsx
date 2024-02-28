@@ -19,7 +19,6 @@ const SignIn = () => {
       console.log(response.data);
       
       Cookies.set("Username",name); 
-      Cookies.set("Token", response.data.token);
       setName("");
       setPassword("");
       setTimeout(() => {
