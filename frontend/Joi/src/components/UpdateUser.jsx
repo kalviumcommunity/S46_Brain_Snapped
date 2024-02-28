@@ -12,8 +12,8 @@ function UpdateUser() {
         axios.get(`http://localhost:3001/main/getNewUser/${id}`)
             .then(result => {
                 console.log(result.data);
-                setUpdatedUsername(result.data.username || ''); // Ensure these values are not undefined
-                setUpdatedSnappedData(result.data.snappedData || ''); // Ensure these values are not undefined
+                setUpdatedUsername(result.data.username); 
+                setUpdatedSnappedData(result.data.snappedData); 
             })
             .catch(err => console.log(err));
     }, [id]);

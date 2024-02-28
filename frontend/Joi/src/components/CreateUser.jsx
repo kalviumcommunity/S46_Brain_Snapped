@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie'; // Import Cookies library
 
 function CreateUser() {
     const [username, setUserName] = useState('');
     const [snappedData, setSnappedData] = useState('');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        // Retrieve the value of the cookie named "Username" and set it as the initial state
+        const usernameFromCookie = Cookies.get("Username");
+        if (usernameFromCookie) {
+            setUserName(usernameFromCookie);
+        }
+    }, []); // Empty dependency array ensures this effect runs only once, on component mount
 
     const Submit = (e) => {
         e.preventDefault();
@@ -31,6 +40,7 @@ function CreateUser() {
                         <label htmlFor="" className='p-1 text-black'>Name :</label>
                         <input 
                             type="text" 
+                            value={username}    
                             placeholder='Use your login name' 
                             style={{ width: '100%', padding: '10px', borderRadius: '5px', backgroundColor: 'white', color: 'black', border: '1px solid black' }} 
                             onChange={(event) => setUserName(event.target.value)}
