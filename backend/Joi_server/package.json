@@ -61,7 +61,6 @@
     "is-number": "^7.0.0",
     "joi": "^17.12.2",
     "js-cookie": "^3.0.5",
-
     "jsonwebtoken": "^9.0.2",
     "jwa": "^1.4.1",
     "jws": "^3.2.2",
@@ -89,7 +88,7 @@
     "mquery": "^5.0.0",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
-    "nodemon": "^3.0.3",
+    "nodemon": "^3.1.0",
     "nopt": "^1.0.10",
     "normalize-path": "^3.0.0",
     "object-assign": "^4.1.1",
@@ -132,7 +131,8 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
   },
   "keywords": [],
   "author": "",

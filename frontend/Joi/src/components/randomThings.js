@@ -1,57 +1,105 @@
-// src/data/snappedData.js
 const snappedData = [
     {
-      id: 1,
-      userName: "Alice",
-      randomThing: "Checking the fridge even though you just checked it five minutes ago."
+        id: 11,
+        userName: "Katie",
+        randomThing: "Telling yourself you'll remember something without writing it down, and then forgetting it."
     },
     {
-      id: 2,
-      userName: "Bob",
-      randomThing: "Clicking your pen repeatedly even though it doesn't make it write any faster."
+        id: 12,
+        userName: "Liam",
+        randomThing: "Laughing at your own jokes, even if nobody else finds them funny."
     },
     {
-      id: 3,
-      userName: "Charlie",
-      randomThing: "Starting a sentence, then forgetting what you were going to say."
+        id: 13,
+        userName: "Megan",
+        randomThing: "Forgetting why you walked into a room, then remembering when you walk back out."
     },
     {
-      id: 4,
-      userName: "David",
-      randomThing: "Talking to yourself, even if there's nobody else around."
+        id: 14,
+        userName: "Nathan",
+        randomThing: "Singing along to songs in a language you don't understand, making up your own lyrics."
     },
     {
-      id: 5,
-      userName: "Eva",
-      randomThing: "Picking at your fingernails or cuticles, even though it hurts."
+        id: 15,
+        userName: "Olivia",
+        randomThing: "Putting something in a 'safe place' and then forgetting where that place is."
     },
     {
-      id: 6,
-      userName: "Frank",
-      randomThing: "Counting the steps you take when going up or down stairs."
+        id: 16,
+        userName: "Peter",
+        randomThing: "Waving back at someone who wasn't actually waving at you."
     },
     {
-      id: 7,
-      userName: "Grace",
-      randomThing: "Inspecting chips to figure out the 'correct' side to put on your tongue."
+        id: 17,
+        userName: "Quinn",
+        randomThing: "Talking to pets as if they understand everything you say."
     },
     {
-      id: 8,
-      userName: "Henry",
-      randomThing: "Lowering the music in the car just to 'see better' when driving in an unfamiliar place."
+        id: 18,
+        userName: "Rachel",
+        randomThing: "Trying to balance the light switches so they're all in the middle."
     },
     {
-      id: 9,
-      userName: "Ivy",
-      randomThing: "Pretending to be asleep when someone walks into the room."
+        id: 19,
+        userName: "Sam",
+        randomThing: "Getting excited about plans, then finding any excuse to cancel them."
     },
     {
-      id: 10,
-      userName: "Jack",
-      randomThing: "Smelling your own clothes to see if they're dirty."
+        id: 20,
+        userName: "Tyler",
+        randomThing: "Waking up in the middle of the night and checking your phone for no reason."
+    },
+    {
+        id: 21,
+        userName: "Ursula",
+        randomThing: "Laughing at a text message you received hours ago, as if it's brand new."
+    },
+    {
+        id: 22,
+        userName: "Victor",
+        randomThing: "Trying to discreetly sniff yourself to check if you need deodorant."
+    },
+    {
+        id: 23,
+        userName: "Wendy",
+        randomThing: "Using 'Google' as a verb for searching, regardless of the search engine you're actually using."
+    },
+    {
+        id: 24,
+        userName: "Xander",
+        randomThing: "Making sound effects for everyday actions, like 'whoosh' when opening a door."
+    },
+    {
+        id: 25,
+        userName: "Yvonne",
+        randomThing: "Pretending to understand a joke you didn't hear, just to fit in with the laughter."
+    },
+    {
+        id: 26,
+        userName: "Zack",
+        randomThing: "Checking the time on your phone, then realizing you didn't actually look at the clock."
+    },
+    {
+        id: 27,
+        userName: "Alice",
+        randomThing: "Reading the shampoo bottle in the shower out of sheer boredom."
+    },
+    {
+        id: 28,
+        userName: "Bob",
+        randomThing: "Trying to quiet down noisy snacks as if they can hear you."
+    },
+    {
+        id: 29,
+        userName: "Charlie",
+        randomThing: "Having a full conversation with someone in your head and then realizing you never said a word out loud."
+    },
+    {
+        id: 30,
+        userName: "David",
+        randomThing: "Waving at someone on a video call and then feeling silly when they don't see you."
     },
     // Add more random things here
-  ];
-  
-  export default snappedData;
-  
+];
+
+export default snappedData;
