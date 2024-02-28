@@ -9,13 +9,13 @@ function CreateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/createUser", {
+        axios.post("http://localhost:3001/main/createUser", {
             username,
             snappedData
         })
         .then(result => {
             console.log(result);
-            navigate('/');
+            navigate('/main');
         })
         .catch(err => {
             console.error('Error creating user:', err);
@@ -23,32 +23,32 @@ function CreateUser() {
     }
     
     return (
-        <div className='d-flex vh-100 bg-white justify-content-center align-items-center'>
-            <div className='bg-black rounded p-3 text-white' style={{ width: '500px', border: '1px solid white' }}>
+        <div className='d-flex vh-100 bg-black justify-content-center align-items-center'>
+            <div className='bg-white rounded p-3 text-white' style={{ width: '460px', border: '1px solid white' }}>
                 <form onSubmit={Submit}>
-                    <h2 className='text-center mb-2'>Create New User</h2>
-                    <div className='m-1'>
-                        <label htmlFor="" className='p-2 text-white'>Name</label>
+                    <h2 className='text-center text-black mb-1'>Create New User</h2>
+                    <div className=''>
+                        <label htmlFor="" className='p-1 text-black'>Name :</label>
                         <input 
                             type="text" 
-                            placeholder='Enter name' 
-                            className='form-control bg-dark text-white' 
+                            placeholder='Use your login name' 
+                            style={{ width: '100%', padding: '10px', borderRadius: '5px', backgroundColor: 'white', color: 'black', border: '1px solid black' }} 
                             onChange={(event) => setUserName(event.target.value)}
                             required
                         />
                     </div>
-                    <div className='m-2'>
-                        <label htmlFor="" className='p-2 text-white'>Random Things</label>
+                    <div className='pt-2'>
+                        <label htmlFor="" className='p-1 text-black'>Random Things :</label>
                         <input 
                             type="text" 
                             placeholder='Enter a random thing you do' 
-                            className='form-control bg-dark text-white' 
+                            style={{ width: '100%', padding: '10px',border: '1px solid black' ,  borderRadius: '5px', backgroundColor: 'white', color: 'black', }}   
                             onChange={(event) => setSnappedData(event.target.value)}
                             required
                         />
                     </div>
-                    <div className='text-end'>
-                        <button className='btn btn-success m-3'>Add</button>
+                    <div className='text-center'>
+                        <button className='btn btn-success mt-3'>Add data</button>
                     </div>
                 </form>
             </div>

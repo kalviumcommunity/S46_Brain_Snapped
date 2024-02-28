@@ -16,39 +16,52 @@ const SignIn = () => {
         name: name,
         password: password
       });
-      console.log(response.data)
+      console.log(response.data);
+      
+      Cookies.set("Username",name); 
+      Cookies.set("Token", response.data.token);
       setName("");
       setPassword("");
-      Cookies.set("Username", name);
       setTimeout(() => {
-        navigate('/');
+        navigate('/main');
       }, 1500);
-
 
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 
   return (
-    <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
-      <form onSubmit={appendData} style={{ width: '400px', padding: '20px', borderRadius: '10px', backgroundColor: 'black' }}>
-        <h2 style={{ textAlign: 'center', color: 'white' }}>Sign In</h2>
+    <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'black' }}>
+      <form onSubmit={appendData} style={{ width: '400px', padding: '20px', borderRadius: '10px', backgroundColor: 'white' }}>
+
+        <h2 style={{ textAlign: 'center', color: 'black' }}>Sign In</h2>
+
         <div style={{ marginBottom: '20px' }}>
-          <label style={{ color: 'white' }}>UserName :</label>
-          <input type='text' placeholder='' required onChange={(e) => { setName(e.target.value) }} style={{ width: '100%', padding: '10px', border: '1px solid white', borderRadius: '5px', backgroundColor: 'black', color: 'white' }} />
+          <label style={{ color: 'black' }}>UserName :</label>
+          <input 
+          type='text' 
+          placeholder='' 
+          required 
+          onChange={(e) => { setName(e.target.value) }} 
+          style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }}
+        />
         </div>
 
         <div style={{ marginBottom: '20px' }}>
-          <label style={{ color: 'white' }}>Password :</label>
-          <input type='password' placeholder='6 - 16 characters' required onChange={(e) => { setPassword(e.target.value) }} style={{ width: '100%', padding: '10px', border: '1px solid white', borderRadius: '5px', backgroundColor: 'black', color: 'white' }} />
+          <label style={{ color: 'black' }}>Password :</label>
+          <input type='password' 
+          placeholder='6 - 16 characters' 
+          required 
+          onChange={(e) => { setPassword(e.target.value) }} 
+          style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white  ', color: 'black' }} 
+          />
         </div>
 
-        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: 'white', color: 'black', border: '1px solid white', borderRadius: '5px', cursor: 'pointer' }}>Submit</button>
-
+        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: 'black', color: 'white', border:"none", borderRadius: '5px', cursor: 'pointer' }}>Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default SignIn;
