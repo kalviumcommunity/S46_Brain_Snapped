@@ -26,7 +26,7 @@ function UpdateUser() {
         })
         .then(result => {
             console.log(result);
-            navigate('/main'); // Ensure the route matches your application route
+            navigate('/main'); 
         })
         .catch(err => console.log(err));
     };
@@ -42,7 +42,7 @@ function UpdateUser() {
                             type='text' 
                             value={updatedUsername}
                             placeholder='Use your login name' 
-                            // className='form-control' 
+                            readOnly={true}
                             style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }} 
                             onChange={(event) => setUpdatedUsername(event.target.value)}
                             required
@@ -54,7 +54,6 @@ function UpdateUser() {
                             type='text' 
                             value={updatedSnappedData}
                             placeholder='Enter a random thing you do' 
-                            // className='form-control' 
                             style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }} 
                             onChange={(event) => setUpdatedSnappedData(event.target.value)}
                             required

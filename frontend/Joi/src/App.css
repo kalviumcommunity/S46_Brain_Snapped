@@ -1,11 +1,13 @@
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
 }
+
 
 body {
   -ms-overflow-style: none; 
@@ -18,7 +20,6 @@ body {
  background-position: center;
  background-size: cover; 
  background-repeat: no-repeat;
-
  height: 85vh;
  padding: 30px;
 }
@@ -34,6 +35,19 @@ nav {
   border-radius: 10px;
 }
 
+
+.nav-link {
+  color: white; 
+  text-decoration: none; 
+  margin-right: 20px; 
+}
+
+.nav-link:hover {
+  color: aqua;
+  text-decoration:overline; 
+}
+
+
 h1 {
   font-size: 2rem;
 } 
@@ -42,14 +56,20 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30vh;
-  padding-right: 20px;
+  width: 50vh;
   font-size: 1.2rem;
+}
+
+
+.linktext{
+  padding-right: 20px;
+  color: wheat;
+  text-decoration: none;
 }
 
 .random-thing-generator {
   height: 250px;
-  width: 700px;
+  width: 730px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -63,54 +83,6 @@ h1 {
   color: black;
 }
 
-h2{
-  font-size: 2.2rem;
-}
-
-p {
-  height: 80px;
- padding: 15px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 17px;
-  color:white;
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 10px;
-}
-
-h1 {
-  font-size: 2rem;
-} 
-
-#headers {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 30vh;
-  padding-right: 20px;
-  font-size: 1.2rem;
-}
-
-.random-thing-generator {
-  position: absolute;
-  left: 50%;
-  top: 47%;
-  transform: translate(-50%,-50%);
-  font-size: 1.5rem;
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 20px;
-  background-color: rgb(238, 231, 231);
-  padding: 20px;
-  color: black;
-
-}
-
 .randombutton {
   padding: 10px;
   margin: 15px;
@@ -122,9 +94,28 @@ h1 {
   cursor: pointer;
 }
 
-.large-text{
-  font-size: 1.6rem;
+h1{
+  font-size: 2.2rem;
 }
+
+p {
+  height: 80px;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.p{
+  background: white;
+  color: black;
+  border-radius: 5px;
+  
+}
+
+.snappedData{
+  font-size: 1.4rem;
+}
+
+
 
 label{
   font-size: 1.1rem;
