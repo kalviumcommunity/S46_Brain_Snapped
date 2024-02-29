@@ -14,7 +14,7 @@ mongoose.connect("mongodb+srv://Snegan29:snegan2914@cluster0.jqmpnkb.mongodb.net
 
 // Generating tokens
 const generateToken = (payload) => {
-    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '1d' });
+    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '10y' });
 }
 
 // Authentication middleware
@@ -56,7 +56,7 @@ app.post('/users',async(req,res) => {
     res.json({token});
 })
 
-
+// signin
 app.post('/users/signin',async(req,res) => {
     const {name , password} = req.body;
     const user = await LoginModal.findOne({name});
@@ -89,6 +89,7 @@ app.get('/main/getNewUser/:id', (req, res) => {
         .catch(err => res.status(500).json({ error: err.message }));
 });
 
+// posting a new data
 app.post("/main/createUser", (req, res) => {
     const { error } = userSchema.validate(req.body);
     if (error) {

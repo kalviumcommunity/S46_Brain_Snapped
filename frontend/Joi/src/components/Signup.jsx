@@ -7,6 +7,7 @@ function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -18,7 +19,10 @@ function Signup() {
         email: email,
         password: password
       });
-      console.log('Posted Successfully', response.data);
+      console.log('Posted Successfully', response);
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
       setName('');
       setEmail('');
       setPassword('');  
@@ -64,13 +68,20 @@ function Signup() {
           <div style={{ marginBottom: '20px' }}>
             <label style={{ color: 'black' }}>Password :</label>
             <input 
-              type="password" 
+              type={showPassword ? "text" : "password"} 
               placeholder="use atleast 7 characters" 
               onChange={(e) => setPassword(e.target.value)} 
               value={password} 
-              style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }} 
+              style={{ width: '80%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }} 
               required
             />
+            <button 
+              type="button" 
+              onClick={() => setShowPassword(!showPassword)} 
+              style={{ marginLeft: '10px',padding:"7px",width:"50px", backgroundColor: 'white', border: '1px solid black', borderRadius: '5px', cursor: 'pointer' }}
+            >
+              {showPassword ? "Hide" : "Show"} 
+            </button>
           </div>
 
           <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: 'black', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Submit</button>

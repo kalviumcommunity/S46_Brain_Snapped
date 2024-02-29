@@ -36,20 +36,22 @@ function Users() {
       <Navbar/>
       <div className='container vh-100'>
         <div className='h-100 bg-white rounded p-5' style={{ color: 'black' }}>
-          <h1 className='text-center p-2'>Random Things we do for no reason</h1>
+          <div className='' style={{display:"flex", justifyContent:"space-between"}}>
+            <h1 className='text-center'><span>R</span>andom Things we do for no reason</h1>
+            <button className='btn btn-danger h-auto  ' onClick={handleLogout}>Logout</button>
+          </div>
           <hr />
           <div className="" style ={{display:'flex',justifyContent:"space-between"}}>
             <Link to='/create' className='btn btn-success'> Add your data </Link>
-            <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
           </div>
           <div className="row mt-4">
             {users.map((person, index) => (
-              <div className="col-md-4 mb-5" key={person._id}>
-                <div className="card h-100" style={{ backgroundColor: 'black', color: 'white' }}>
+              <div className="col-md-6 mb-4" key={person._id}>
+                <div className="card h-auto" style={{ backgroundColor: 'black', color: 'white' }}>
                   <div className="card-body d-flex flex-column">
-                    <h5 className="card-title large-text">{person.username}</h5>
+                    <h3 className="card-title ">{person.username}</h3>
                     <hr />
-                    <p className="card-text flex-grow-1">{person.snappedData}</p>
+                    <p className="card-text flex-grow-1 h-auto p">{person.snappedData}</p>
 
                     {person.username === Cookies.get("Username") &&
     

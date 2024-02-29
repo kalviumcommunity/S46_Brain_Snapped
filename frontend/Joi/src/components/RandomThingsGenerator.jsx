@@ -12,7 +12,7 @@ const RandomThingsGenerator = () => {
   return (
     <div>
         <h2>{randomThing.userName},</h2>
-        <p>{randomThing.randomThing}</p>
+        <p className="snappedData">{randomThing.randomThing}</p>
         <button className='randombutton' onClick={generateRandomThings}>Random Things</button>
     </div>
   );

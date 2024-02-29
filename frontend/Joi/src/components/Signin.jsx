@@ -16,10 +16,13 @@ const SignIn = () => {
         name: name,
         password: password
       });
+      console.log("User Details:")
       console.log(response.data);
-      
-      Cookies.set("Username",name); 
-      Cookies.set("Token", response.data.token);
+      console.log('Name:', name);
+      console.log('Password:', password);
+
+      Cookies.set("Username",name);
+      Cookies.set("Token",response.data.token);
       setName("");
       setPassword("");
       setTimeout(() => {
@@ -41,7 +44,7 @@ const SignIn = () => {
           <label style={{ color: 'black' }}>UserName :</label>
           <input 
           type='text' 
-          placeholder='' 
+          placeholder='Enter your sign-up name' 
           required 
           onChange={(e) => { setName(e.target.value) }} 
           style={{ width: '100%', padding: '10px', border: '1px solid black', borderRadius: '5px', backgroundColor: 'white', color: 'black' }}
