@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken")
 const { loginSchema, userSchema } = require('./models/validateSchema.js');
 const UserModal = require('./models/Users.js');
 const LoginModal = require('./models/Login.js');
@@ -14,7 +14,7 @@ mongoose.connect("mongodb+srv://Snegan29:snegan2914@cluster0.jqmpnkb.mongodb.net
 
 // Generating tokens
 const generateToken = (payload) => {
-    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '10y' });
+    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '10m' });
 }
 
 // Authentication middleware

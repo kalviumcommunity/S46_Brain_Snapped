@@ -27,7 +27,6 @@ function Signup() {
       setEmail('');
       setPassword('');  
       Cookies.set("Username",name);
-      Cookies.set("Token",response.data.token);
       navigate('/main');
     } catch (err) {
       console.error('Error signing up:', err);
