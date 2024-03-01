@@ -21,7 +21,7 @@ function UpdateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:3001/main/updateUser/${id}`, {
+        axios.put(`https://s46-brain-snapped.onrender.com/main/updateUser/${id}`, {
             updatedUsername,
             updatedSnappedData
         })

@@ -12,7 +12,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/users/signin', {
+      const response = await axios.post('https://s46-brain-snapped.onrender.com/users/signin', {
         name: name.toLocaleLowerCase(),
         password: password
       });

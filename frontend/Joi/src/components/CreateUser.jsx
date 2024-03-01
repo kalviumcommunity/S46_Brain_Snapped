@@ -17,7 +17,7 @@ function CreateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/main/createUser", {
+        axios.post("https://s46-brain-snapped.onrender.com/main/createUser", {
             username,
             snappedData
         },{headers : {Authorization: `Bearer ${Cookies.get('Token')}`}})
