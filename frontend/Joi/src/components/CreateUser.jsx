@@ -34,7 +34,7 @@ function CreateUser() {
         <div className='d-flex vh-100 bg-black justify-content-center align-items-center'>
             <div className='bg-white rounded p-3 text-white' style={{ width: '460px', border: '1px solid white' }}>
                 <form onSubmit={Submit}>
-                    <h2 className='text-center text-black mb-1'>Create New User</h2>
+                    <h2 className='text-center text-black mb-1'>Create New Data</h2>
                     <div className=''>
                         <label htmlFor="" className='p-1 text-black'>Name :</label>
                         <input 
