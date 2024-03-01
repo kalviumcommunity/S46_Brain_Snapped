@@ -10,7 +10,7 @@ function UpdateUser() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/main/getNewUser/${id}`)
+        axios.get(`https://s46-brain-snapped.onrender.com/main/getNewUser/${id}`)
             .then(result => {
                 console.log(result.data);
                 setUpdatedUsername(result.data.username); 
