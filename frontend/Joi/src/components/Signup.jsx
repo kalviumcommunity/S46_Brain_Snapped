@@ -15,7 +15,7 @@ function Signup() {
 
     try {
       const response = await axios.post('http://localhost:3001/users', {
-        name: name,
+        name: name.toLocaleLowerCase(),
         email: email,
         password: password
       });

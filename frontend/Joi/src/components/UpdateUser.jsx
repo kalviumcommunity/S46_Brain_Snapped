@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 function UpdateUser() {
     const { id } = useParams();
@@ -14,7 +15,7 @@ function UpdateUser() {
                 console.log(result.data);
                 setUpdatedUsername(result.data.username); 
                 setUpdatedSnappedData(result.data.snappedData); 
-            })
+            },{headers : {Authorization: `Bearer ${Cookies.get('Token')}`}})
             .catch(err => console.log(err));
     }, [id]);
 
