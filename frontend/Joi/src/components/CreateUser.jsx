@@ -11,7 +11,7 @@ function CreateUser() {
     useEffect(() => {
         const usernameFromCookie = Cookies.get("Username");
         if (usernameFromCookie) {
-            setUserName(usernameFromCookie);
+            setUserName(usernameFromCookie.toLocaleLowerCase() );
         }
     }, []); 
 
@@ -20,7 +20,7 @@ function CreateUser() {
         axios.post("http://localhost:3001/main/createUser", {
             username,
             snappedData
-        })
+        },{headers : {Authorization: `Bearer ${Cookies.get('Token')}`}})
         .then(result => {
             console.log(result);
             navigate('/main');
