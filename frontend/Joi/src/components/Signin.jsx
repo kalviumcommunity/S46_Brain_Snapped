@@ -21,7 +21,7 @@ const SignIn = () => {
       console.log('Name:', name);
       console.log('Password:', password);
 
-      Cookies.set("Username",name);
+      Cookies.set("SigninName",name);
       Cookies.set("Token",response.data.token);
       setName("");
       setPassword("");

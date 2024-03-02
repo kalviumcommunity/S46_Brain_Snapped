@@ -119,5 +119,5 @@ app.delete('/main/deleteUser/:id', (req, res) => {
 });
 
 app.listen(3001, () => {
-    console.log("server is running at http://localhost:3001")
+    console.log("server is running at https://brain-snapped-hkye.onrender.com/")
 });
