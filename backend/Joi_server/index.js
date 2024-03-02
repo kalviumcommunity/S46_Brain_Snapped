@@ -6,6 +6,7 @@ const { loginSchema, userSchema } = require('./models/validateSchema.js');
 const UserModal = require('./models/Users.js');
 const LoginModal = require('./models/Login.js');
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
