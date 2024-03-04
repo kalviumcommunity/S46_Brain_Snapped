@@ -21,7 +21,7 @@ This compilation captures those spontaneous and seemingly purposeless actions th
 
 Feel free to contribute more peculiar behaviors to this collection!
 
-#### Thank You :D
+#### Thank You :D.
 
 [Check out the static page version here](https://brain-snap-client.vercel.app/)
 
