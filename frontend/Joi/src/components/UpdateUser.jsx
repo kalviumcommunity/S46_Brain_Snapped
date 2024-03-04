@@ -10,7 +10,7 @@ function UpdateUser() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`https://backend-part2-ymp1.vercel.app/main/getNewUser/${id}`)
+        axios.get(`https://backend-part2-server.vercel.app/main/getNewUser/${id}`)
             .then(result => {
                 console.log(result.data);
                 setUpdatedUsername(result.data.username); 
@@ -21,7 +21,7 @@ function UpdateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.put(`https://backend-part2-ymp1.vercel.app/updateUser/${id}`, {
+        axios.put(`https://backend-part2-server.vercel.app/updateUser/${id}`, {
             updatedUsername,
             updatedSnappedData
         })

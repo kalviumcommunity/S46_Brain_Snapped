@@ -17,7 +17,7 @@ function CreateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("https://backend-part2-ymp1.vercel.app/main/createUser", {
+        axios.post("https://backend-part2-server.vercel.app/main/createUser", {
             username,
             snappedData
         },{headers : {Authorization: `Bearer ${Cookies.get('Token')}`}})
