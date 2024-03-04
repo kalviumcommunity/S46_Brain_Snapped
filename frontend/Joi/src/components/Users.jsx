@@ -19,7 +19,7 @@ function Users() {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:2001/main/deleteUser/${id}`)
+    axios.delete(`https://brain-snapped-zng6.onrender.com/main/deleteUser/${id}`)
       .then(res => {
         console.log(res);
         setUsers(users.filter(user => user._id !== id)); // Update users list after deletion
