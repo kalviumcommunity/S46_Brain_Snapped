@@ -10,7 +10,7 @@ function Users() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("https://backend-part2-server.vercel.app/main", { headers: { Authorization: `Bearer ${Cookies.get('Token')}` } })
+    axios.get("http://localhost:2001/main", { headers: { Authorization: `Bearer ${Cookies.get('Token')}` } })
       .then(result => {
         setUsers(result.data);
         setFilteredUsers(result.data); // Initialize filteredUsers with all users initially
@@ -19,7 +19,7 @@ function Users() {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`https://backend-part2-server.vercel.app/main/deleteUser/${id}`)
+    axios.delete(`http://localhost:2001/main/deleteUser/${id}`)
       .then(res => {
         console.log(res);
         setUsers(users.filter(user => user._id !== id)); // Update users list after deletion

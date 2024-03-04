@@ -12,7 +12,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://backend-part2-server.vercel.app/users/signin', {
+      const response = await axios.post('http://localhost:2001/users/signin', {
         name: name.toLocaleLowerCase(),
         password: password
       });
