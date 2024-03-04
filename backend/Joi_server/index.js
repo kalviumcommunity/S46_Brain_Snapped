@@ -15,7 +15,7 @@ mongoose.connect("mongodb+srv://Snegan29:snegan2914@cluster0.jqmpnkb.mongodb.net
 
 // Generating tokens
 const generateToken = (payload) => {
-    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '10m' });
+    return jwt.sign(payload, "secretcanbeasecret", { expiresIn: '10y' });
 }
 
 // Authentication middleware
@@ -119,6 +119,6 @@ app.delete('/main/deleteUser/:id', (req, res) => {
         .catch(err => res.status(500).json({ error: err.message }));
 });
 
-app.listen(3001, () => {
-    console.log("server is running at https://brain-snapped-hkye.onrender.com/")
+app.listen(2001, () => {
+    console.log("server is running at http://localhost:2001")
 });

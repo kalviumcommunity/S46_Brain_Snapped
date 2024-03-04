@@ -12,7 +12,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://s46-brain-snapped.onrender.com/users/signin', {
+      const response = await axios.post('http://localhost:2001/users/signin', {
         name: name.toLocaleLowerCase(),
         password: password
       });
@@ -21,8 +21,10 @@ const SignIn = () => {
       console.log('Name:', name);
       console.log('Password:', password);
 
-      Cookies.set("SigninName",name);
+      Cookies.set("Username",name);
       Cookies.set("Token",response.data.token);
+
+      console.log("name",Cookies.get("Name"))
       setName("");
       setPassword("");
       setTimeout(() => {

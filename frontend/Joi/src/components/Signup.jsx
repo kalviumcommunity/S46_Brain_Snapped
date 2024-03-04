@@ -14,7 +14,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://s46-brain-snapped.onrender.com/users', {
+      const response = await axios.post('http://localhost:2001/users', {
         name: name.toLocaleLowerCase(),
         email: email,
         password: password
@@ -26,7 +26,8 @@ function Signup() {
       setName('');
       setEmail('');
       setPassword('');  
-      Cookies.set("SignupName",name);
+      Cookies.set("Username",name);
+      Cookies.set("Token", response.data.token)
       navigate('/main');
     } catch (err) {
       console.error('Error signing up:', err);

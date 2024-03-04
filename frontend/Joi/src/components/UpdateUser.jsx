@@ -10,7 +10,7 @@ function UpdateUser() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`https://s46-brain-snapped.onrender.com/main/getNewUser/${id}`)
+        axios.get(`http://localhost:2001/main/getNewUser/${id}`)
             .then(result => {
                 console.log(result.data);
                 setUpdatedUsername(result.data.username); 
@@ -21,7 +21,7 @@ function UpdateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.put(`https://s46-brain-snapped.onrender.com/main/updateUser/${id}`, {
+        axios.put(`http://localhost:2001/main/updateUser/${id}`, {
             updatedUsername,
             updatedSnappedData
         })
