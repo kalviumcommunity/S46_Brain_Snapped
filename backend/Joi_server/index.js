@@ -118,7 +118,3 @@ app.delete('/main/deleteUser/:id', (req, res) => {
         .then(user => res.json(user))
         .catch(err => res.status(500).json({ error: err.message }));
 });
-
-app.listen(2001, () => {
-    console.log("server is running at http://localhost:2001")
-});

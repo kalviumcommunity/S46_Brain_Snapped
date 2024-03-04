@@ -14,7 +14,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:2001/users', {
+      const response = await axios.post('https://backend-part2-ymp1.vercel.app/users', {
         name: name.toLocaleLowerCase(),
         email: email,
         password: password
