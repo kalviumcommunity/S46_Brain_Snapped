@@ -1,4 +1,3 @@
-
 ## Description:
 
 This compilation captures those spontaneous and seemingly purposeless actions that cross our minds in a split second. Here are a few instances:
@@ -23,5 +22,7 @@ This compilation captures those spontaneous and seemingly purposeless actions th
 Feel free to contribute more peculiar behaviors to this collection!
 
 #### Thank You :D
-=======
 
+[Check out the static page version here](https://brain-snap-client.vercel.app/)
+
+[Explore the full-stack version here](https://brain-snap-client.vercel.app/)
