@@ -14,7 +14,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://brain-snapped-zng6.onrender.com/users', {
+      const response = await axios.post('http://localhost:2001/users', {
         name: name.toLocaleLowerCase(),
         email: email,
         password: password
