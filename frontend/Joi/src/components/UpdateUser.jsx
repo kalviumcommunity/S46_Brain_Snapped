@@ -10,7 +10,7 @@ function UpdateUser() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:2001/main/getNewUser/${id}`)
+        axios.get(`https://brain-snap-server.vercel.app/main/getNewUser/${id}`)
             .then(result => {
                 console.log(result.data);
                 setUpdatedUsername(result.data.username); 
@@ -21,7 +21,7 @@ function UpdateUser() {
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:2001/updateUser/${id}`, {
+        axios.put(`https://brain-snap-server.vercel.app/main/updateUser/${id}`, {
             updatedUsername,
             updatedSnappedData
         })
